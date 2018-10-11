@@ -3,9 +3,10 @@ public class Card {
     private SuitType suit;
     private RankType rank;
 
-    public Card(SuitType suit, RankType rank) {
-        this.suit = suit;
+    public Card( RankType rank, SuitType suit) {
+
         this.rank = rank;
+        this.suit = suit;
     }
 
     public SuitType getSuit(){

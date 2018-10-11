@@ -4,13 +4,8 @@ public class Deck {
 
     private ArrayList<Card> cards;
 
-//    private SuitType suit;
-//    private RankType rank;
-
     public Deck(){
         this.cards = new ArrayList<>();
-//        this.suit = suit;
-//        this.rank = rank;
     }
 
 
@@ -25,9 +20,9 @@ public class Deck {
 
     public void populate() {
 //        ArrayList<Card> populatedDeck = new ArrayList<>();
-        for(SuitType suit : SuitType.values()){
-            for(RankType rank : RankType.values()){
-                Card card = new Card(suit, rank);
+        for(RankType rank : RankType.values()){
+            for(SuitType suit : SuitType.values()){
+                Card card = new Card(rank, suit);
                 addCard(card);
             }
         }
