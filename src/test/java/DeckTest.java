@@ -30,4 +30,17 @@ public class DeckTest {
         deck.populate();
         assertEquals(52, deck.getSize());
     }
+
+    @Test
+    public void deckIsShuffled(){
+        deck.populate();
+        deck.shuffleDeck();
+    }
+
+    @Test
+    public void cardRemovedFromDeck(){
+        deck.populate();
+        deck.removeCard();
+        assertEquals(51, deck.getSize());
+    }
 }
