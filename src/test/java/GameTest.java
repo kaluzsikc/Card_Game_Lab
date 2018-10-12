@@ -17,8 +17,8 @@ public class GameTest {
 
         deck = new Deck();
         ArrayList<Player> players = new ArrayList<>();
-//        players.add(player1);
-//        players.add(player2);
+        players.add(player1);
+        players.add(player2);
 
         player1 = new Player("Bob");
         player1 = new Player("Ben");
@@ -40,18 +40,19 @@ public class GameTest {
 
     @Test
     public void addPlayers(){
-        game.addPlayer(player1);
-        game.addPlayer(player2);
+
         assertEquals(2, game.getPlayers());
     }
 
     @Test
     public void readyToPlay(){
         game.addPlayer(player1);
+//        game.addPlayer(player2);
         deck.populate();
         game.play();
-        assertEquals(51, game.getDeck());
+
         assertEquals(1, player1.getHandSize());
+        assertEquals(51, game.getDeck());
     }
 
 }
